@@ -10,7 +10,7 @@
 
 # Your technical partner for the modern Web, Mobile and IoT development
 
-Remote customer teams can rely on our developers as technical partners, using Elixir, Erlang, React, React Native, and Objective C
+Remote customer teams can rely on our developers as technical partners, using Elixir, Erlang, React, React Native
 
 [What can we do for you][4]
 
@@ -95,7 +95,7 @@ Augmented Reality experience
 
 Here is an extract from our last talk in Stockholm Code Beam
 
-"In this talk, I'll explain how current web applications are no longer merely DB projections, but more complex and distributed applications that require technologies and architectures unlike those of the past. We start with a simple & classic application and move toward a more complex and feature-rich application that needs a more advanced architecture."   
+"In this talk, I'll explain how current web applications are no longer merely DB projections, but more complex and distributed applications that require technologies and architectures unlike those of the past. We start with a simple & classic application and move toward a more complex and feature-rich application that needs a more advanced architecture."
 
 #elixir #erlang #distributedsystem #elixir #erlang #distributedsystem #howto #features #codes #beam #webapplications #technologyarchitecture #distributedapplications #architecture #cqrs #eventsourcing
 
@@ -131,8 +131,8 @@ If you like our aliens, just click to the botton below:
     * __
     * __
 
-© Copyright 2018. All Rights Reserved. - P.IVA/CF 03455241202   
-[Privacy Policy][11]   
+© Copyright 2018. All Rights Reserved. - P.IVA/CF 03455241202
+[Privacy Policy][11]
 [cookie policy][12]
 
 [1]: http://www.coders51.com/img/logo-alt.png
@@ -148,4 +148,4 @@ If you like our aliens, just click to the botton below:
 [11]: https://www.iubenda.com/privacy-policy/92327660 "Privacy Policy"
 [12]: http://www.coders51.com/cookie.html
 
-  
+
