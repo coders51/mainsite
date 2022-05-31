@@ -151,6 +151,12 @@ blockquote:before{
   color: #FFF;
 }
 
+.grey a {
+  font-weight: inherit;
+  color: #FFF;
+  text-decoration: underline;
+}
+
 /* --- Background Image --- */
 .bg-image {
   position:absolute;
@@ -1352,4 +1358,8 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 @keyframes preloader {
   from { -webkit-transform: rotate(0deg); transform: rotate(0deg);}
   to { -webkit-transform: rotate(360deg); transform: rotate(360deg);}
+}
+
+#contact-cta{
+  padding: 80px 0;
 }
