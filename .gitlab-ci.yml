@@ -7,6 +7,7 @@ pages:
     - cp -r css .public
     - cp -r img .public
     - cp -r js .public
+    - cp -r fonts .public
     - cp index.html .public
     - cp robots.txt .public
     - mv .public public
