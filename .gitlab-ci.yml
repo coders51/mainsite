@@ -3,9 +3,13 @@ image: busybox
 pages:
   stage: deploy
   script:
-    - echo "The site will be deployed to $CI_PAGES_URL"
+    - mkdir .public
+    - cp -r css .public
+    - cp -r img .public
+    - cp -r js .public
+    - cp index.html .public
+    - cp robots.txt .public
+    - mv .public public
   artifacts:
     paths:
-      - ./
-  rules:
-    - if: $CI_COMMIT_BRANCH == "rebrand"
+      - public
