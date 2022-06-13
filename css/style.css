@@ -225,8 +225,7 @@ blockquote:before {
 }
 
 .main-button.icon-button:after {
-  content: "\f178";
-  font-family: FontAwesome;
+  content: "👽";
   position: absolute;
   width: 30px;
   right: 15px;
