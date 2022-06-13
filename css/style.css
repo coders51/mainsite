@@ -1504,6 +1504,10 @@ textarea:focus {
   align-items: center;
 }
 
+.success-story a {
+  width: 100%;
+}
+
 .success-story img {
   width: 100%;
 }
