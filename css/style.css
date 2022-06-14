@@ -1480,9 +1480,6 @@ textarea:focus {
   align-content: center;
   align-items: center;
 }
-.success-stories-content .cesarine {
-  max-width: 110px;
-}
 
 .success-stories-content {
   display: grid;
