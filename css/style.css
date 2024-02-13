@@ -89,7 +89,7 @@ ol {
 }
 
 .white-text {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 blockquote {
@@ -120,6 +120,7 @@ blockquote:before {
   position: relative;
   padding-top: 40px;
   padding-bottom: 40px;
+  background: linear-gradient(to left, rgba(220, 220, 220, 1) 0%, rgba(255, 255, 255, 0.95) 50%, rgba(220, 220, 220, 1) 100%);
 }
 
 .section-hr {
@@ -133,6 +134,7 @@ blockquote:before {
 }
 
 .blue {
+  background: linear-gradient(to right, rgba(1, 100, 160, 1) 0%, rgba(1, 50, 80, 1) 100%);
   background-color: rgba(1, 100, 160, 1);
   color: #fff;
 }
@@ -150,7 +152,9 @@ blockquote:before {
 }
 
 .grey {
+  background: linear-gradient(to right, rgba(49, 58, 67, 1) 0%, rgba(37, 44, 50, 1) 100%);
   background-color: rgba(49, 58, 67, 1);
+
   color: #fff;
 }
 
