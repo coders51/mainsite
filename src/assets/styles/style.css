@@ -475,7 +475,9 @@ textarea:focus {
   -webkit-transition: 0.2s -webkit-transform;
   transition: 0.2s -webkit-transform;
   transition: 0.2s transform;
-  transition: 0.2s transform, 0.2s -webkit-transform;
+  transition:
+    0.2s transform,
+    0.2s -webkit-transform;
 }
 
 .navbar-toggle > span,
@@ -1412,62 +1414,6 @@ textarea:focus {
 
   .blog-reply-form .input.email-input {
     margin-left: 0px;
-  }
-}
-
-/*------------------------------------*\
-  Preloader
-\*------------------------------------*/
-#preloader {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: #fff;
-  z-index: 9999;
-}
-
-#preloader .preloader {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-#preloader .preloader:after {
-  content: "";
-  display: block;
-  width: 40px;
-  height: 40px;
-  border: 1px solid #ebebeb;
-  border-top: 1px solid #0165a1;
-  border-radius: 50%;
-  -webkit-animation: 1s preloader linear infinite;
-  animation: 1s preloader linear infinite;
-}
-
-@-webkit-keyframes preloader {
-  from {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes preloader {
-  from {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
   }
 }
 
