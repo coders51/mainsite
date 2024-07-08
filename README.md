@@ -1,12 +1,11 @@
-
 [Source](http://www.coders51.com/ "Permalink to coders51: Your technical partner ")
 
 # coders51: Your technical partner
 
 [ ![logo][1] ][2]
 
-* [Home][2]
-* [Contact][3]
+- [Home][2]
+- [Contact][3]
 
 # Your technical partner for the modern Web, Mobile and IoT development
 
@@ -18,24 +17,24 @@ Remote customer teams can rely on our developers as technical partners, using El
 
 Since our group in 2011 through our growth into a company, our consolidated team of senior developers has been working as technological partners for an extensive client base.
 
-__
+\_\_
 
 #### High Quality Languages and Knowledge
 
-* Elixir / Erlang
-* React
-* React Native
-* CQRS and Event Sourcing architectures
-* iOs and Android native
-* Ruby On Rails
+- Elixir / Erlang
+- React
+- React Native
+- CQRS and Event Sourcing architectures
+- iOs and Android native
+- Ruby On Rails
 
-__
+\_\_
 
 #### The right methods
 
 We work TDD and love continuous development. We have customers worldwide, working with our remote teams to support them everyday with the best tools available.
 
-__
+\_\_
 
 #### Community
 
@@ -51,7 +50,7 @@ We strive for high standards of development and scalable architectures to satisf
 
 Ask us and we will explain why we are the best solution for your company.
 
-__
+\_\_
 
 #### Advanced software
 
@@ -63,7 +62,7 @@ IoT integrations
 
 Mobile application and backend
 
-__
+\_\_
 
 #### An eye to social
 
@@ -77,7 +76,7 @@ Entertainment
 
 Startup
 
-__
+\_\_
 
 #### Experience in different environments
 
@@ -89,7 +88,7 @@ Big Ecommerce
 
 Augmented Reality experience
 
-* * *
+---
 
 ### Developers know our Elixir way of thinking ;)
 
@@ -103,17 +102,13 @@ Here is an extract from our last talk in Stockholm Code Beam
 >
 > In this talk, I'll explain how the current web applications are no more simple DB projections but more complex and distributed applications that require technologies and architectures different from the past. We start with a simple & classic application to move to a more complex and feature-rich application that need a more advanced architecture.
 
-* * *
+---
 
 ## Customers/Partners and success stories
 
-
-
-
-
 ![coders51 customers since 2015][8]
 
-* * *
+---
 
 ## Contact Us
 
@@ -147,5 +142,3 @@ If you like our aliens, just click to the botton below:
 [10]: http://www.coders51.com/img/logo.png
 [11]: https://www.iubenda.com/privacy-policy/92327660 "Privacy Policy"
 [12]: http://www.coders51.com/cookie.html
-
-
