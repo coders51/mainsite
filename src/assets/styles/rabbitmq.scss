@@ -1,15 +1,3 @@
-.et_pb_section_0 {
-  background-color: #313a43;
-  background-image: url("/img/background_1a.png"),
-    linear-gradient(180deg, #313a43 0%, #0164a0 99%);
-
-  color: white;
-
-  h2 {
-    color: white;
-  }
-}
-
 .article-body {
   margin-top: 80px;
 }
@@ -38,21 +26,20 @@
   position: relative;
 }
 
-// .gfield_required {
-//   color: #ff6400;
-//   font-style: italic;
-//   font-weight: 400;
-//   display: inline-block;
-//   font-size: 13.008px;
-//   padding-inline-start: 0.125em;
-// }
+.no-margin-top {
+  margin-top: 0;
+}
 
-// .ginput_container {
-//   input {
-//     background-color: #fff;
-//     border: 1px solid #bbb;
-//     padding: 8px;
-//     font-size: 15px;
-//     color: #4e4e4e;
-//   }
-// }
+.rabbitmq {
+  h4.et_pb_module_header {
+    margin-top: 0;
+  }
+}
+
+.et_pb_image_wrap {
+  .fa-solid {
+    font-size: 35px;
+    color: #0164a0;
+    margin-right: 16px;
+  }
+}
