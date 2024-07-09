@@ -1,0 +1,58 @@
+.et_pb_section_0 {
+  background-color: #313a43;
+  background-image: url("/img/background_1a.png"),
+    linear-gradient(180deg, #313a43 0%, #0164a0 99%);
+
+  color: white;
+
+  h2 {
+    color: white;
+  }
+}
+
+.article-body {
+  margin-top: 80px;
+}
+
+.gfield {
+  legend {
+    border-bottom: 0;
+  }
+  input,
+  select {
+    background-color: #fff;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    color: #4e4e4e;
+  }
+}
+
+.gform_button {
+  color: black;
+}
+.gform-field-label--type-inline {
+  display: inline;
+  font-weight: 400;
+  margin-left: 5px;
+  top: -1px;
+  position: relative;
+}
+
+// .gfield_required {
+//   color: #ff6400;
+//   font-style: italic;
+//   font-weight: 400;
+//   display: inline-block;
+//   font-size: 13.008px;
+//   padding-inline-start: 0.125em;
+// }
+
+// .ginput_container {
+//   input {
+//     background-color: #fff;
+//     border: 1px solid #bbb;
+//     padding: 8px;
+//     font-size: 15px;
+//     color: #4e4e4e;
+//   }
+// }

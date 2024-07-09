@@ -1,0 +1,48 @@
+.gform_title {
+  font-size: 30px;
+  color: #ffffff;
+  display: none;
+}
+
+.gform-field-label {
+  color: #ffffff;
+}
+
+.gform_wrapper.gravity-theme .gfield_required {
+  color: #ff6400;
+}
+
+.gform_wrapper.gravity-theme .gfield_consent_description {
+  border: none !important;
+  color: #ffffff;
+}
+
+.gform_wrapper.gravity-theme .gform_footer input {
+  border-width: 0px !important;
+  border-radius: 50px;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: none;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 0.3em 1em;
+  line-height: 1.7em !important;
+  background-color: #ffffff;
+  border: 2px solid;
+}
+
+#gform_confirmation_message_1 {
+  color: #ff6400;
+}
+
+#gform_confirmation_message_2 {
+  color: #ff6400;
+}
+
+#gform_confirmation_message_3 {
+  color: #ff6400;
+}
+
+#gform_confirmation_message_4 {
+  color: #ff6400;
+}

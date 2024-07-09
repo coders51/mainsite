@@ -111,6 +111,166 @@ const { title } = Astro.props;
   </head>
   <body>
     <slot />
+
+    <!-- Contact CTA -->
+    <div id="contact-cta" class="section">
+      <!-- Backgound Image -->
+      <div
+        class="bg-image bg-parallax overlay"
+        style="background-image:url(/img/cta2-background.png)"
+      >
+      </div>
+      <!-- Backgound Image -->
+
+      <!-- container -->
+      <div class="container">
+        <!-- row -->
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h1 class="white-text">Contact Us</h1>
+            <p class="lead white-text">
+              If you're interested in what we do or you want to join our team
+              feel free to reach us!
+            </p>
+
+            <a
+              class="typeform-share main-button icon-button"
+              href="https://coders51.typeform.com/to/BpB9pe"
+              target="_blank"
+              data-mode="popup">Contact Us</a
+            >
+            <script>
+              // @ts-nocheck
+              (function () {
+                var qs,
+                  js,
+                  q,
+                  s,
+                  d = document,
+                  gi = d.getElementById,
+                  ce = d.createElement,
+                  gt = d.getElementsByTagName,
+                  id = "typef_orm_share",
+                  b = "https://embed.typeform.com/";
+                if (!gi.call(d, id)) {
+                  js = ce.call(d, "script");
+                  js.id = id;
+                  js.src = b + "embed.js";
+                  q = gt.call(d, "script")[0];
+                  q.parentNode.insertBefore(js, q);
+                }
+              })();
+            </script>
+          </div>
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+    </div>
+    <!-- /Contact CTA -->
+
+    <!-- Footer -->
+    <footer id="footer" class="section">
+      <!-- container -->
+      <div class="container">
+        <!-- row -->
+        <div class="row">
+          <!-- footer logo -->
+          <div class="col-md-6">
+            <div class="footer-logo">
+              <a class="logo" href="index.html">
+                <img src="/img/logo.png" alt="logo" />
+              </a>
+            </div>
+          </div>
+          <!-- footer logo -->
+        </div>
+        <!-- /row -->
+
+        <!-- row -->
+        <div id="bottom-footer" class="row">
+          <!-- social -->
+          <div class="col-md-4 col-md-push-8">
+            <ul class="footer-social">
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/coders51/"
+                  target="new"
+                  class="linkedin"
+                  ><span class="sr-only">linkedin</span>
+                  <i class="fa-brands fa-linkedin-in"></i></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com/coders51"
+                  target="new"
+                  class="x-twitter"
+                >
+                  <span class="sr-only">x-twitter</span>
+                  <i class="fa-brands fa-x-twitter"></i></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/coders51"
+                  target="new"
+                  class="facebook"
+                >
+                  <span class="sr-only">facebook</span>
+                  <i class="fa-brands fa-facebook-f"></i></a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- /social -->
+
+          <!-- copyright -->
+          <div class="col-md-8 col-md-pull-4">
+            <div class="footer-copyright">
+              <p>
+                &copy; Copyright 2022. All Rights Reserved.
+                <br />
+                coders51 SRL - Viale Angelo Masini 12/14 - 40126 Bologna (BO) - Italy
+                - VAT ID 03455241202
+                <br />
+              </p>
+              <div class="privacy-container">
+                <a
+                  href="https://www.iubenda.com/privacy-policy/81936352"
+                  class="iubenda-white no-brand iubenda-noiframe iubenda-embed iubenda-noiframe"
+                  title="Privacy Policy ">Privacy Policy</a
+                ><script type="text/javascript">
+                  (function (w, d) {
+                    var loader = function () {
+                      var s = d.createElement("script"),
+                        tag = d.getElementsByTagName("script")[0];
+                      s.src = "https://cdn.iubenda.com/iubenda.js";
+                      tag.parentNode.insertBefore(s, tag);
+                    };
+                    if (w.addEventListener) {
+                      w.addEventListener("load", loader, false);
+                    } else if (w.attachEvent) {
+                      w.attachEvent("onload", loader);
+                    } else {
+                      w.onload = loader;
+                    }
+                  })(window, document);
+                </script>
+              </div>
+            </div>
+          </div>
+          <!-- /copyright -->
+        </div>
+        <!-- row -->
+      </div>
+      <!-- /container -->
+
+      <button onclick="topFunction()" id="scrollTopButton" title="Go to top"
+        ><i class="fa-solid fa-chevron-up"></i></button
+      >
+    </footer>
+    <!-- /Footer -->
   </body>
 
   <script type="text/javascript" src="/js/jquery.min.js"></script>
