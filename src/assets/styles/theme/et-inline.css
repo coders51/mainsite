@@ -369,10 +369,6 @@ body #main-content .et_builder_inner_content > p {
 }
 
 @media (max-width: 980px) {
-  #page-container {
-    padding-top: 80px;
-  }
-
   .et-tb #page-container,
   .et-tb-has-header #page-container {
     padding-top: 0 !important;
