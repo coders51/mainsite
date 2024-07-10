@@ -1,0 +1,66 @@
+---
+interface Props {
+  page: string;
+}
+
+const { page } = Astro.props;
+---
+
+{
+  page === "index" && (
+    <>
+      <meta name="twitter:card" content="summary" />
+      <meta
+        name="twitter:title"
+        content="coders51 - We design, build and evolve scalable software platforms"
+      />
+      <meta
+        name="twitter:description"
+        content="A team of software experts with technological leadership and a consulting partner for the management and governance of complex software architectures"
+      />
+      <meta name="twitter:site" content="@coders51" />
+      <meta
+        name="twitter:image:src"
+        content="http://www.coders51.com/img/share2.jpg"
+      />
+      <meta
+        name="og:title"
+        content="coders51 - We design, build and evolve scalable software platforms"
+      />
+      <meta
+        name="og:description"
+        content="A team of software experts with technological leadership and a consulting partner for the management and governance of complex software architectures"
+      />
+      <meta name="og:image" content="http://www.coders51.com/img/share2.jpg" />
+      <meta name="og:url" content="http://www.coders51.com/" />
+      <meta name="og:site_name" content="coders51" />
+      <meta name="fb:app_id" content="1028463787335394" />
+      <meta name="og:type" content="website" />
+    </>
+  )
+}
+
+{
+  page === "rabbitmq" && (
+    <>
+      <meta property="og:locale" content="it_IT" />
+      <meta property="og:type" content="article" />
+      <meta
+        property="og:title"
+        content="RabbitMQ: perfetto per applicazioni Mission-Critical - Coders51 Sviluppo Software"
+      />
+      <meta
+        property="og:url"
+        content="https://ads.coders51.com/rabbitmq-applicazioni-mission-critical/"
+      />
+      <meta property="og:site_name" content="Coders51 Sviluppo Software" />
+      <meta
+        property="article:modified_time"
+        content="2023-02-27T20:07:33+00:00"
+      />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:label1" content="Tempo di lettura stimato" />
+      <meta name="twitter:data1" content="19 minuti" />
+    </>
+  )
+}

@@ -1,12 +1,14 @@
 ---
 import "../assets/styles/bootstrap.min.css";
 import "../assets/styles/style.css";
+import SocialMeta from "../components/SocialMeta.astro";
 
 interface Props {
   title: string;
+  page?: string;
 }
 
-const { title } = Astro.props;
+const { title, page = "index" } = Astro.props;
 ---
 
 <!doctype html>
@@ -32,40 +34,12 @@ const { title } = Astro.props;
       itemprop="description"
       content="A team of software experts with technological leadership and a consulting partner for the management and governance of complex software architectures"
     />
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary" />
-    <meta
-      name="twitter:title"
-      content="coders51 - We design, build and evolve scalable software platforms"
-    />
-    <meta
-      name="twitter:description"
-      content="A team of software experts with technological leadership and a consulting partner for the management and governance of complex software architectures"
-    />
-    <meta name="twitter:site" content="@coders51" />
-    <meta
-      name="twitter:image:src"
-      content="http://www.coders51.com/img/share2.jpg"
-    />
-    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
-    <meta
-      name="og:title"
-      content="coders51 - We design, build and evolve scalable software platforms"
-    />
-    <meta
-      name="og:description"
-      content="A team of software experts with technological leadership and a consulting partner for the management and governance of complex software architectures"
-    />
-    <meta name="og:image" content="http://www.coders51.com/img/share2.jpg" />
-    <meta name="og:url" content="http://www.coders51.com/" />
-    <meta name="og:site_name" content="coders51" />
-    <meta name="fb:app_id" content="1028463787335394" />
-    <meta name="og:type" content="website" />
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
+    <SocialMeta page={page} />
     <meta name="robots" content="index, follow" />
     <meta name="revisit-after" content="15" />
     <meta name="language" content="en-US" />
@@ -251,66 +225,65 @@ const { title } = Astro.props;
       >
     </footer>
     <!-- /Footer -->
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+    <script type="text/javascript">
+      var _iub = _iub || [];
+      _iub.csConfiguration = {
+        ccpaAcknowledgeOnDisplay: true,
+        ccpaApplies: true,
+        consentOnContinuedBrowsing: false,
+        enableCcpa: true,
+        floatingPreferencesButtonDisplay: "bottom-left",
+        invalidateConsentWithoutLog: true,
+        lang: "en",
+        perPurposeConsent: true,
+        siteId: 2695371,
+        whitelabel: false,
+        cookiePolicyId: 81936352,
+        banner: {
+          acceptButtonDisplay: true,
+          closeButtonDisplay: false,
+          customizeButtonDisplay: true,
+          explicitWithdrawal: true,
+          listPurposes: true,
+          position: "bottom",
+          rejectButtonDisplay: true,
+        },
+      };
+    </script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/ccpa/stub.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.iubenda.com/cs/iubenda_cs.js"
+      charset="UTF-8"
+      async></script>
+
+    <script>
+      // @ts-nocheck
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "//www.google-analytics.com/analytics.js",
+        "ga"
+      );
+      ga("create", "UA-62477704-1", "auto");
+      ga("send", "pageview");
+    </script>
   </body>
-
-  <script type="text/javascript" src="/js/jquery.min.js"></script>
-  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="/js/main.js"></script>
-  <script type="text/javascript">
-    var _iub = _iub || [];
-    _iub.csConfiguration = {
-      ccpaAcknowledgeOnDisplay: true,
-      ccpaApplies: true,
-      consentOnContinuedBrowsing: false,
-      enableCcpa: true,
-      floatingPreferencesButtonDisplay: "bottom-left",
-      invalidateConsentWithoutLog: true,
-      lang: "en",
-      perPurposeConsent: true,
-      siteId: 2695371,
-      whitelabel: false,
-      cookiePolicyId: 81936352,
-      banner: {
-        acceptButtonDisplay: true,
-        closeButtonDisplay: false,
-        customizeButtonDisplay: true,
-        explicitWithdrawal: true,
-        listPurposes: true,
-        position: "bottom",
-        rejectButtonDisplay: true,
-      },
-    };
-  </script>
-  <script type="text/javascript" src="//cdn.iubenda.com/cs/ccpa/stub.js"
-  ></script>
-  <script
-    type="text/javascript"
-    src="//cdn.iubenda.com/cs/iubenda_cs.js"
-    charset="UTF-8"
-    async></script>
-
-  <script>
-    // @ts-nocheck
-    (function (i, s, o, g, r, a, m) {
-      i["GoogleAnalyticsObject"] = r;
-      (i[r] =
-        i[r] ||
-        function () {
-          (i[r].q = i[r].q || []).push(arguments);
-        }),
-        (i[r].l = 1 * new Date());
-      (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m);
-    })(
-      window,
-      document,
-      "script",
-      "//www.google-analytics.com/analytics.js",
-      "ga"
-    );
-    ga("create", "UA-62477704-1", "auto");
-    ga("send", "pageview");
-  </script>
 </html>
