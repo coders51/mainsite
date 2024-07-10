@@ -16,6 +16,11 @@ import "../assets/styles/theme/et-inline.css";
 >
   <Header hideNav />
   <article id="page-container" class="rabbitmq article-body et_pb_gutters3">
+    <div class="et_pb_module et_pb_code et_pb_code_0 anchor">
+      <div class="et_pb_code_inner">
+        <a name="form">&nbsp;</a>
+      </div>
+    </div>
     <div
       class="et_pb_section et_pb_section_0 et_pb_with_background et_section_regular"
     >
@@ -44,11 +49,6 @@ import "../assets/styles/theme/et-inline.css";
               for microservices.
             </div>
           </div>
-          <div class="et_pb_module et_pb_code et_pb_code_0">
-            <div class="et_pb_code_inner">
-              <a name="form">&nbsp;</a>
-            </div>
-          </div>
         </div>
         <div
           class="et_pb_column et_pb_column_1_2 et_pb_column_1 et_pb_css_mix_blend_mode_passthrough et-last-child"
@@ -66,15 +66,8 @@ import "../assets/styles/theme/et-inline.css";
                     Are you looking for RabbitMQ? (head)
                   </h2>
                   <p class="gform_description"></p>
-                </div><form
-                  method="post"
-                  enctype="multipart/form-data"
-                  id="gform_3"
-                  action="/rabbitmq-applicazioni-mission-critical/"
-                  data-formid="3"
-                  novalidate=""
-                  data-hs-cf-bound="true"
-                >
+                </div>
+                <form method="POST">
                   <div class="gform-body gform_body">
                     <div
                       id="gform_fields_3"
@@ -88,17 +81,18 @@ import "../assets/styles/theme/et-inline.css";
                         <label
                           class="gfield_label gform-field-label"
                           for="input_3_5"
-                          >Email<span class="gfield_required"
-                            ><span class="gfield_required gfield_required_text"
-                              >(Required)</span
-                            ></span
-                          ></label
-                        ><div class="ginput_container ginput_container_email">
+                          >Email
+                          <span class="gfield_required">
+                            <span class="gfield_required gfield_required_text">
+                              (Required)
+                            </span>
+                          </span>
+                        </label>
+                        <div class="ginput_container ginput_container_email">
                           <input
-                            name="input_5"
-                            id="input_3_5"
+                            name="email"
+                            required
                             type="email"
-                            value=""
                             class="large"
                             aria-required="true"
                             aria-invalid="false"
@@ -119,8 +113,8 @@ import "../assets/styles/theme/et-inline.css";
                           ></label
                         ><div class="ginput_container ginput_container_text">
                           <input
-                            name="input_3"
-                            id="input_3_3"
+                            name="firstName"
+                            required
                             type="text"
                             value=""
                             class="large"
@@ -143,9 +137,9 @@ import "../assets/styles/theme/et-inline.css";
                           ></label
                         ><div class="ginput_container ginput_container_text">
                           <input
-                            name="input_4"
-                            id="input_3_4"
+                            name="lastName"
                             type="text"
+                            required
                             value=""
                             class="large"
                             aria-required="true"
@@ -167,8 +161,8 @@ import "../assets/styles/theme/et-inline.css";
                           ></label
                         ><div class="ginput_container ginput_container_select">
                           <select
-                            name="input_8"
-                            id="input_3_8"
+                            name="job"
+                            required
                             class="large gfield_select"
                             aria-required="true"
                             aria-invalid="false"
@@ -190,15 +184,15 @@ import "../assets/styles/theme/et-inline.css";
                       >
                         <div class="ginput_container ginput_container_text">
                           <input
-                            name="input_11"
-                            id="input_3_11"
+                            name="rabbitmq"
                             type="hidden"
                             class="gform_hidden"
                             aria-invalid="false"
                             value="RabbitMQ"
                           />
                         </div>
-                      </div><fieldset
+                      </div>
+                      <fieldset
                         id="field_3_10"
                         class="gfield gfield--type-consent gfield--type-choice gfield--input-type-consent gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"
                         data-js-reload="field_3_10"
@@ -212,29 +206,20 @@ import "../assets/styles/theme/et-inline.css";
                           ></legend
                         ><div class="ginput_container ginput_container_consent">
                           <input
-                            name="input_10.1"
-                            id="input_3_10_1"
+                            name="consent"
                             type="checkbox"
+                            required
+                            id="consent"
                             value="1"
                             aria-required="true"
                             aria-invalid="false"
                           />
                           <label
                             class="gform-field-label gform-field-label--type-inline gfield_consent_label"
-                            for="input_3_10_1"
+                            for="consent"
                             >I consent to the processing of my data as indicated
                             in the website's Privacy Policy.
-                          </label><input
-                            type="hidden"
-                            name="input_10.2"
-                            value="Do il consenso al trattamento dei miei dati come indicato nella Privacy Policy del sito web."
-                            class="gform_hidden"
-                          /><input
-                            type="hidden"
-                            name="input_10.3"
-                            value="5"
-                            class="gform_hidden"
-                          />
+                          </label>
                         </div>
                       </fieldset>
                       <div
@@ -266,11 +251,8 @@ import "../assets/styles/theme/et-inline.css";
                   <div class="gform_footer top_label">
                     <input
                       type="submit"
-                      id="gform_submit_button_3"
                       class="gform_button button"
                       value="Send"
-                      onclick='if(window["gf_submitting_3"]){return false;}  if( !jQuery("#gform_3")[0].checkValidity || jQuery("#gform_3")[0].checkValidity()){window["gf_submitting_3"]=true;}  '
-                      onkeypress='if( event.keyCode == 13 ){ if(window["gf_submitting_3"]){return false;} if( !jQuery("#gform_3")[0].checkValidity || jQuery("#gform_3")[0].checkValidity()){window["gf_submitting_3"]=true;}  jQuery("#gform_3").trigger("submit",[true]); }'
                     />
                     <input
                       type="hidden"
@@ -315,204 +297,6 @@ import "../assets/styles/theme/et-inline.css";
                   </div>
                 </form>
               </div>
-              <script type="text/javascript">
-                /* <![CDATA[ */
-                // gform.initializeOnLoaded(function () {
-                //   gformInitSpinner(
-                //     3,
-                //     "https://ads.coders51.com/wp-content/plugins/gravityforms/images/spinner.svg",
-                //     true
-                //   );
-                //   jQuery("#gform_ajax_frame_3").on("load", function () {
-                //     var contents = jQuery(this)
-                //       .contents()
-                //       .find("*")
-                //       .html();
-                //     var is_postback =
-                //       contents.indexOf("GF_AJAX_POSTBACK") >= 0;
-                //     if (!is_postback) {
-                //       return;
-                //     }
-                //     var form_content = jQuery(this)
-                //       .contents()
-                //       .find("#gform_wrapper_3");
-                //     var is_confirmation =
-                //       jQuery(this)
-                //         .contents()
-                //         .find("#gform_confirmation_wrapper_3").length > 0;
-                //     var is_redirect =
-                //       contents.indexOf("gformRedirect(){") >= 0;
-                //     var is_form =
-                //       form_content.length > 0 &&
-                //       !is_redirect &&
-                //       !is_confirmation;
-                //     var mt =
-                //       parseInt(jQuery("html").css("margin-top"), 10) +
-                //       parseInt(jQuery("body").css("margin-top"), 10) +
-                //       100;
-                //     if (is_form) {
-                //       jQuery("#gform_wrapper_3").html(
-                //         form_content.html()
-                //       );
-                //       if (
-                //         form_content.hasClass("gform_validation_error")
-                //       ) {
-                //         jQuery("#gform_wrapper_3").addClass(
-                //           "gform_validation_error"
-                //         );
-                //       } else {
-                //         jQuery("#gform_wrapper_3").removeClass(
-                //           "gform_validation_error"
-                //         );
-                //       }
-                //       setTimeout(function () {
-                //         /* delay the scroll by 50 milliseconds to fix a bug in chrome */
-                //       }, 50);
-                //       if (window["gformInitDatepicker"]) {
-                //         gformInitDatepicker();
-                //       }
-                //       if (window["gformInitPriceFields"]) {
-                //         gformInitPriceFields();
-                //       }
-                //       var current_page = jQuery(
-                //         "#gform_source_page_number_3"
-                //       ).val();
-                //       gformInitSpinner(
-                //         3,
-                //         "https://ads.coders51.com/wp-content/plugins/gravityforms/images/spinner.svg",
-                //         true
-                //       );
-                //       jQuery(document).trigger("gform_page_loaded", [
-                //         3,
-                //         current_page,
-                //       ]);
-                //       window["gf_submitting_3"] = false;
-                //     } else if (!is_redirect) {
-                //       var confirmation_content = jQuery(this)
-                //         .contents()
-                //         .find(".GF_AJAX_POSTBACK")
-                //         .html();
-                //       if (!confirmation_content) {
-                //         confirmation_content = contents;
-                //       }
-                //       jQuery("#gform_wrapper_3").replaceWith(
-                //         confirmation_content
-                //       );
-                //       jQuery(document).trigger(
-                //         "gform_confirmation_loaded",
-                //         [3]
-                //       );
-                //       window["gf_submitting_3"] = false;
-                //       wp.a11y.speak(
-                //         jQuery("#gform_confirmation_message_3").text()
-                //       );
-                //     } else {
-                //       jQuery("#gform_3").append(contents);
-                //       if (window["gformRedirect"]) {
-                //         gformRedirect();
-                //       }
-                //     }
-                //     jQuery(document).trigger("gform_pre_post_render", [
-                //       {
-                //         formId: "3",
-                //         currentPage: "current_page",
-                //         abort: function () {
-                //           this.preventDefault();
-                //         },
-                //       },
-                //     ]);
-                //     if (event && event.defaultPrevented) {
-                //       return;
-                //     }
-                //     const gformWrapperDiv =
-                //       document.getElementById("gform_wrapper_3");
-                //     if (gformWrapperDiv) {
-                //       const visibilitySpan =
-                //         document.createElement("span");
-                //       visibilitySpan.id = "gform_visibility_test_3";
-                //       gformWrapperDiv.insertAdjacentElement(
-                //         "afterend",
-                //         visibilitySpan
-                //       );
-                //     }
-                //     const visibilityTestDiv = document.getElementById(
-                //       "gform_visibility_test_3"
-                //     );
-                //     let postRenderFired = false;
-                //     function triggerPostRender() {
-                //       if (postRenderFired) {
-                //         return;
-                //       }
-                //       postRenderFired = true;
-                //       jQuery(document).trigger("gform_post_render", [
-                //         3,
-                //         current_page,
-                //       ]);
-                //       gform.utils.trigger({
-                //         event: "gform/postRender",
-                //         native: false,
-                //         data: {
-                //           formId: 3,
-                //           currentPage: current_page,
-                //         },
-                //       });
-                //       if (visibilityTestDiv) {
-                //         visibilityTestDiv.parentNode.removeChild(
-                //           visibilityTestDiv
-                //         );
-                //       }
-                //     }
-                //     function debounce(func, wait, immediate) {
-                //       var timeout;
-                //       return function () {
-                //         var context = this,
-                //           args = arguments;
-                //         var later = function () {
-                //           timeout = null;
-                //           if (!immediate) func.apply(context, args);
-                //         };
-                //         var callNow = immediate && !timeout;
-                //         clearTimeout(timeout);
-                //         timeout = setTimeout(later, wait);
-                //         if (callNow) func.apply(context, args);
-                //       };
-                //     }
-                //     const debouncedTriggerPostRender = debounce(
-                //       function () {
-                //         triggerPostRender();
-                //       },
-                //       200
-                //     );
-                //     if (
-                //       visibilityTestDiv &&
-                //       visibilityTestDiv.offsetParent === null
-                //     ) {
-                //       const observer = new MutationObserver(
-                //         (mutations) => {
-                //           mutations.forEach((mutation) => {
-                //             if (
-                //               mutation.type === "attributes" &&
-                //               visibilityTestDiv.offsetParent !== null
-                //             ) {
-                //               debouncedTriggerPostRender();
-                //               observer.disconnect();
-                //             }
-                //           });
-                //         }
-                //       );
-                //       observer.observe(document.body, {
-                //         attributes: true,
-                //         childList: false,
-                //         subtree: true,
-                //         attributeFilter: ["style", "class"],
-                //       });
-                //     } else {
-                //       triggerPostRender();
-                //     }
-                //   });
-                // });
-                /* ]]&gt; */
-              </script>
             </div>
           </div>
         </div>
@@ -941,8 +725,9 @@ import "../assets/styles/theme/et-inline.css";
                 <strong>No information is lost.</strong>
               </p>
             </div>
-          </div><div
-            class="et_pb_button_module_wrapper et_pb_button_1_wrapper et_pb_button_alignment_center et_pb_module"
+          </div>
+          <div
+            class="et_pb_button_module_wrapper et_pb_button_1_wrapper et_pb_button_alignment_center et_pb_module download-button"
           >
             <a
               class="et_pb_button et_pb_button_1 et_pb_bg_layout_light"

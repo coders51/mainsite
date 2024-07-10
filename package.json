@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/check": "^0.7.0",
     "astro": "^4.11.5",
+    "email-validator": "^2.0.4",
     "typescript": "^5.5.3"
   },
   "devDependencies": {
