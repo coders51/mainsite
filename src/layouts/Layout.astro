@@ -63,7 +63,9 @@ const { title, page = "index" } = Astro.props;
 
     <script async src="https://tally.so/widgets/embed.js"></script>
 
+    <script is:inline src="https://smtpjs.com/v3/smtp.js"></script>
     <script
+      is:inline
       src="https://kit.fontawesome.com/8d0672dfc8.js"
       crossorigin="anonymous"></script>
 
@@ -73,7 +75,7 @@ const { title, page = "index" } = Astro.props;
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script type="application/ld+json">
+    <script is:inline type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "Organization",
