@@ -112,7 +112,7 @@ blockquote {
 
 blockquote:before {
   content: "\f10d";
-  font-family: fontAwesome;
+  font-family: FontAwesome;
   position: absolute;
   left: 0;
   top: 0;

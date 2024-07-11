@@ -1,0 +1,71 @@
+.article-body {
+  margin-top: 80px;
+}
+
+.gfield {
+  legend {
+    border-bottom: 0;
+  }
+  input,
+  select {
+    background-color: #fff;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    color: #4e4e4e;
+  }
+}
+
+.gform_button {
+  color: black;
+}
+.gform-field-label--type-inline {
+  display: inline;
+  font-weight: 400;
+  margin-left: 5px;
+  top: -1px;
+  position: relative;
+}
+
+.no-margin-top {
+  margin-top: 0;
+}
+
+.rabbitmq {
+  h4.et_pb_module_header {
+    margin-top: 0;
+  }
+}
+
+.et_pb_image_wrap {
+  .fa-solid {
+    font-size: 35px;
+    color: #0164a0;
+    margin-right: 16px;
+  }
+}
+
+.center-image {
+  text-align: center;
+}
+
+.big-text {
+  h3 {
+    font-size: 64px;
+    color: #ffffff !important;
+    text-align: center;
+  }
+}
+
+.download-button {
+  margin-top: 20px;
+}
+
+.anchor {
+  height: 0;
+}
+
+.ginput_container_consent {
+  label {
+    cursor: pointer;
+  }
+}
