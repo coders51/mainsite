@@ -9,6 +9,7 @@ import "../assets/styles/theme/basic.css";
 import "../assets/styles/theme/et-core.css";
 import "../assets/styles/theme/et-divi.css";
 import "../assets/styles/theme/et-inline.css";
+import "toastify-js/src/toastify.css";
 ---
 
 <Layout
@@ -16,17 +17,20 @@ import "../assets/styles/theme/et-inline.css";
   title="RabbitMQ: Perfect for Mission-Critical Applications - Coders51 Software Development"
 >
   <script>
+    import Toastify from "toastify-js";
     // Find all buttons with the `alert` class on the page.
     const forms = document.querySelectorAll("form");
 
-    forms[0].addEventListener("submit", (event) => {
+    const form = forms[0];
+    form.addEventListener("submit", (event) => {
       event.preventDefault();
+
       if (event.target) {
         //@ts-ignore
         const data = new FormData(event.target);
-        console.log([...data.entries()]);
         const firstName = data.get("firstName");
         const email = data.get("email");
+
         //@ts-ignore
         Email.send({
           SecureToken: "9863e8e3-14db-4e3d-a489-7fcc7217afdd",
@@ -41,8 +45,18 @@ import "../assets/styles/theme/et-inline.css";
             firstName +
             ",<br/><br/> grazie di averci contattato! Sono Michele, CEO di Coders51, e sono a tua disposizione per discutere con te eventuali collaborazioni in ambito RabbitMQ; fissa un appuntamento per una videocall senza impegno direttamente sul mio calendario: <a href='https://calendar.app.google/6WJdLKpSxtFo1QPa9'>https://calendar.app.google/6WJdLKpSxtFo1QPa9</a><br/><br/>Nel frattempo <strong>qua sotto puoi trovare il nostro business case</strong> relativo a come abbiamo fatto diventare RabbitMQ il centro di comunicazione nevralgico per garantire scalabilità e performance al nostro cliente Orkestro:<br/><br/><a href='https://coders51.com/rabbitMQ-orkestro.pdf'/>https://coders51.com/rabbitMQ-orkestro.pdf</a><br/><br/>A presto,<br/><br/>MK",
         }).then(() => {
-          alert("Email sent successfully!");
-          window.location.reload();
+          form.reset();
+          Toastify({
+            text: "Email successfully sent!",
+            duration: 3000,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+              background: "#0364A0",
+            },
+          }).showToast();
         });
       }
     });
