@@ -598,9 +598,9 @@ a.et_pb_more_button:after {
 }
 
 .et_pb_button {
-  font-size: 20px;
-  font-weight: 500;
-  padding: 0.3em 1em;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 10px 30px;
   line-height: 1.7em !important;
   background-color: transparent;
   background-size: cover;
@@ -622,7 +622,7 @@ a.et_pb_more_button:after {
 .et_pb_button:hover,
 .et_pb_module .et_pb_button:hover {
   border: 2px solid transparent;
-  padding: 0.3em 2em 0.3em 0.7em;
+  padding: 10px 30px;
 }
 
 .et_pb_button:hover {
@@ -3066,6 +3066,8 @@ article.et_pb_has_overlay {
 
 .et_pb_text_inner {
   position: relative;
+  font-weight: 300;
+  font-size: 21px;
 }
 
 .et_pb_code_inner {
@@ -3310,10 +3312,6 @@ div.et_pb_section.et_pb_section_0 {
 
 .et_pb_section_0.et_pb_section {
   background-color: #313a43 !important;
-}
-
-.et_pb_text_0 h2 {
-  font-size: 40px;
 }
 
 .et_pb_text_1 {

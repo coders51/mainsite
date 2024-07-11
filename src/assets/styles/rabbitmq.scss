@@ -20,7 +20,7 @@
 }
 .gform-field-label--type-inline {
   display: inline;
-  font-weight: 400;
+  font-weight: 300;
   margin-left: 5px;
   top: -1px;
   position: relative;
@@ -33,6 +33,12 @@
 .rabbitmq {
   h4.et_pb_module_header {
     margin-top: 0;
+  }
+  .panel-body {
+    p {
+      font-weight: 300;
+      font-size: 18px;
+    }
   }
 }
 
@@ -67,5 +73,12 @@
 .ginput_container_consent {
   label {
     cursor: pointer;
+  }
+}
+
+.et_pb_blurb_description {
+  p {
+    font-weight: 300;
+    font-size: 18px;
   }
 }
