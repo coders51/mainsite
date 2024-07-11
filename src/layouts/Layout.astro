@@ -230,7 +230,7 @@ const { title, page = "index" } = Astro.props;
     <script type="text/javascript" src="/js/jquery.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/js/main.js"></script>
-    <script type="text/javascript">
+    <script is:inline type="text/javascript">
       var _iub = _iub || [];
       _iub.csConfiguration = {
         ccpaAcknowledgeOnDisplay: true,
@@ -255,15 +255,18 @@ const { title, page = "index" } = Astro.props;
         },
       };
     </script>
-    <script type="text/javascript" src="//cdn.iubenda.com/cs/ccpa/stub.js"
-    ></script>
     <script
+      is:inline
+      type="text/javascript"
+      src="//cdn.iubenda.com/cs/ccpa/stub.js"></script>
+    <script
+      is:inline
       type="text/javascript"
       src="//cdn.iubenda.com/cs/iubenda_cs.js"
       charset="UTF-8"
       async></script>
 
-    <script>
+    <script is:inline>
       // @ts-nocheck
       (function (i, s, o, g, r, a, m) {
         i["GoogleAnalyticsObject"] = r;
