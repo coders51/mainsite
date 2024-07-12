@@ -9,7 +9,7 @@ import "../assets/styles/theme/basic.css";
 import "../assets/styles/theme/et-core.css";
 import "../assets/styles/theme/et-divi.css";
 import "../assets/styles/theme/et-inline.css";
-import "toastify-js/src/toastify.css";
+import RabbitModal from "../components/RabbitModal.astro";
 ---
 
 <Layout
@@ -17,49 +17,30 @@ import "toastify-js/src/toastify.css";
   title="RabbitMQ: Perfect for Mission-Critical Applications - Coders51 Software Development"
 >
   <script>
-    //@ts-ignore
-    import Toastify from "toastify-js";
-    // Find all buttons with the `alert` class on the page.
-    const forms = document.querySelectorAll("form");
-
-    const form = forms[0];
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
-
-      if (event.target) {
+    const formId = "31E2PO";
+    const buttons = document.querySelectorAll(".tally-button");
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
         //@ts-ignore
-        const data = new FormData(event.target);
-        const firstName = data.get("firstName");
-        const email = data.get("email");
-
-        //@ts-ignore
-        Email.send({
-          SecureToken: "9863e8e3-14db-4e3d-a489-7fcc7217afdd",
-          To: email,
-          From: "MK @ Coder51 <ddallolio@coders51.com>",
-          Subject:
-            "Grazie per il contatto " +
-            firstName +
-            " : ecco il tuo PDF su RabbitMQ !",
-          Body:
-            "Ciao " +
-            firstName +
-            ",<br/><br/> grazie di averci contattato! Sono Michele, CEO di Coders51, e sono a tua disposizione per discutere con te eventuali collaborazioni in ambito RabbitMQ; fissa un appuntamento per una videocall senza impegno direttamente sul mio calendario: <a href='https://calendar.app.google/6WJdLKpSxtFo1QPa9'>https://calendar.app.google/6WJdLKpSxtFo1QPa9</a><br/><br/>Nel frattempo <strong>qua sotto puoi trovare il nostro business case</strong> relativo a come abbiamo fatto diventare RabbitMQ il centro di comunicazione nevralgico per garantire scalabilità e performance al nostro cliente Orkestro:<br/><br/><a href='https://coders51.com/rabbitMQ-orkestro.pdf'/>https://coders51.com/rabbitMQ-orkestro.pdf</a><br/><br/>A presto,<br/><br/>MK",
-        }).then(() => {
-          form.reset();
-          Toastify({
-            text: "Email successfully sent!",
-            duration: 3000,
-            close: true,
-            gravity: "top", // `top` or `bottom`
-            position: "right", // `left`, `center` or `right`
-            stopOnFocus: true, // Prevents dismissing of toast on hover
-            style: {
-              background: "#187D19",
-            },
-          }).showToast();
+        Tally.openPopup(formId, {
+          layout: "modal", // Open as a centered modal
+          width: 700, // Set the width of the modal
+          autoClose: 1, // Close the popup 5 seconds after form was submitted (in ms)
+          onSubmit: (payload: any) => {
+            console.log(payload);
+            const field = payload.fields.find(
+              ({ title }: { title: string }) => {
+                return title === "First name";
+              }
+            );
+            const name = field.answer.value;
+            //@ts-ignore
+            $("#modalName").text(name);
+            //@ts-ignore
+            $("#bookModal").modal();
+          },
         });
-      }
+      });
     });
   </script>
   <Header hideNav />
@@ -74,7 +55,7 @@ import "toastify-js/src/toastify.css";
     >
       <div class="et_pb_row et_pb_row_0">
         <div
-          class="et_pb_column et_pb_column_1_2 et_pb_column_0 et_pb_css_mix_blend_mode_passthrough"
+          class="et_pb_column et_pb_column_1 et_pb_column_0 et_pb_css_mix_blend_mode_passthrough"
         >
           <div
             class="et_pb_module et_pb_text et_pb_text_0 et_pb_text_align_left et_pb_bg_layout_dark"
@@ -95,256 +76,6 @@ import "toastify-js/src/toastify.css";
               companies with case studies in Bloomberg, Adidas, Reddit, and
               Trivago. RabbitMQ is perfect for use as an advanced routing layer
               for microservices.
-            </div>
-          </div>
-        </div>
-        <div
-          class="et_pb_column et_pb_column_1_2 et_pb_column_1 et_pb_css_mix_blend_mode_passthrough et-last-child"
-        >
-          <div class="et_pb_module et_pb_code et_pb_code_1">
-            <div class="et_pb_code_inner">
-              <div
-                class="gf_browser_chrome gform_wrapper gravity-theme gform-theme--no-framework"
-                data-form-theme="gravity-theme"
-                data-form-index="0"
-                id="gform_wrapper_3"
-              >
-                <div class="gform_heading">
-                  <h2 class="gform_title">
-                    Are you looking for RabbitMQ? (head)
-                  </h2>
-                  <p class="gform_description"></p>
-                </div>
-                <form method="POST">
-                  <div class="gform-body gform_body">
-                    <div
-                      id="gform_fields_3"
-                      class="gform_fields top_label form_sublabel_below description_below validation_below"
-                    >
-                      <div
-                        id="field_3_5"
-                        class="gfield gfield--type-email gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"
-                        data-js-reload="field_3_5"
-                      >
-                        <label
-                          class="gfield_label gform-field-label"
-                          for="input_3_5"
-                          >Email
-                          <span class="gfield_required">
-                            <span class="gfield_required gfield_required_text">
-                              (Required)
-                            </span>
-                          </span>
-                        </label>
-                        <div class="ginput_container ginput_container_email">
-                          <input
-                            name="email"
-                            required
-                            type="email"
-                            class="large"
-                            aria-required="true"
-                            aria-invalid="false"
-                          />
-                        </div>
-                      </div><div
-                        id="field_3_3"
-                        class="gfield gfield--type-text gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"
-                        data-js-reload="field_3_3"
-                      >
-                        <label
-                          class="gfield_label gform-field-label"
-                          for="input_3_3"
-                          >First name<span class="gfield_required"
-                            ><span class="gfield_required gfield_required_text"
-                              >(Required)</span
-                            ></span
-                          ></label
-                        ><div class="ginput_container ginput_container_text">
-                          <input
-                            name="firstName"
-                            required
-                            type="text"
-                            value=""
-                            class="large"
-                            aria-required="true"
-                            aria-invalid="false"
-                          />
-                        </div>
-                      </div><div
-                        id="field_3_4"
-                        class="gfield gfield--type-text gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"
-                        data-js-reload="field_3_4"
-                      >
-                        <label
-                          class="gfield_label gform-field-label"
-                          for="input_3_4"
-                          >Last name<span class="gfield_required"
-                            ><span class="gfield_required gfield_required_text"
-                              >(Required)</span
-                            ></span
-                          ></label
-                        ><div class="ginput_container ginput_container_text">
-                          <input
-                            name="lastName"
-                            type="text"
-                            required
-                            value=""
-                            class="large"
-                            aria-required="true"
-                            aria-invalid="false"
-                          />
-                        </div>
-                      </div><div
-                        id="field_3_8"
-                        class="gfield gfield--type-select gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"
-                        data-js-reload="field_3_8"
-                      >
-                        <label
-                          class="gfield_label gform-field-label"
-                          for="input_3_8"
-                          >Your Job<span class="gfield_required"
-                            ><span class="gfield_required gfield_required_text"
-                              >(Required)</span
-                            ></span
-                          ></label
-                        ><div class="ginput_container ginput_container_select">
-                          <select
-                            name="job"
-                            required
-                            class="large gfield_select"
-                            aria-required="true"
-                            aria-invalid="false"
-                            value="CTO"
-                            ><option value="CTO">CTO</option><option value="CEO"
-                              >CEO</option
-                            ><option value="Tech Leader">Tech Leader</option
-                            ><option value="Software Architect"
-                              >Software Architect</option
-                            ><option value="Developer">Developer</option><option
-                              value="Altro">Other</option
-                            ></select
-                          >
-                        </div>
-                      </div><div
-                        id="field_3_11"
-                        class="gfield gfield--type-hidden gfield--width-full gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"
-                        data-js-reload="field_3_11"
-                      >
-                        <div class="ginput_container ginput_container_text">
-                          <input
-                            name="rabbitmq"
-                            type="hidden"
-                            class="gform_hidden"
-                            aria-invalid="false"
-                            value="RabbitMQ"
-                          />
-                        </div>
-                      </div>
-                      <fieldset
-                        id="field_3_10"
-                        class="gfield gfield--type-consent gfield--type-choice gfield--input-type-consent gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"
-                        data-js-reload="field_3_10"
-                      >
-                        <legend
-                          class="gfield_label gform-field-label gfield_label_before_complex"
-                          >Consent<span class="gfield_required"
-                            ><span class="gfield_required gfield_required_text"
-                              >(Required)</span
-                            ></span
-                          ></legend
-                        ><div class="ginput_container ginput_container_consent">
-                          <input
-                            name="consent"
-                            type="checkbox"
-                            required
-                            id="consent"
-                            value="1"
-                            aria-required="true"
-                            aria-invalid="false"
-                          />
-                          <label
-                            class="gform-field-label gform-field-label--type-inline gfield_consent_label"
-                            for="consent"
-                            >I consent to the processing of my data as indicated
-                            in the website's Privacy Policy.
-                          </label>
-                        </div>
-                      </fieldset>
-                      <div
-                        id="field_3_12"
-                        class="gfield gfield--type-honeypot gform_validation_container field_sublabel_below gfield--has-description field_description_below field_validation_below gfield_visibility_visible"
-                        data-js-reload="field_3_12"
-                      >
-                        <label
-                          class="gfield_label gform-field-label"
-                          for="input_3_12">Email</label
-                        ><div class="ginput_container">
-                          <input
-                            name="input_12"
-                            id="input_3_12"
-                            type="text"
-                            value=""
-                            autocomplete="new-password"
-                          />
-                        </div><div
-                          class="gfield_description"
-                          id="gfield_description_3_12"
-                        >
-                          This field is for validation purposes and should be
-                          left unchanged.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="gform_footer top_label">
-                    <input
-                      type="submit"
-                      class="gform_button button"
-                      value="Send"
-                    />
-                    <input
-                      type="hidden"
-                      class="gform_hidden"
-                      name="is_submit_3"
-                      value="1"
-                    />
-                    <input
-                      type="hidden"
-                      class="gform_hidden"
-                      name="gform_submit"
-                      value="3"
-                    />
-
-                    <input
-                      type="hidden"
-                      class="gform_hidden"
-                      name="gform_unique_id"
-                      value=""
-                    />
-                    <input
-                      type="hidden"
-                      class="gform_hidden"
-                      name="state_3"
-                      value="WyJ7XCI4XCI6W1wiZmI5NWRjNmJlNDUxYzE1YzA1NjRlNDRiYzNkNWFlMTdcIixcImFmZTdiMzFmNTk4NGJiZjg4YWU0MjZiNjFlMDMwNzVmXCIsXCJkMjdkODk2YWY5YjdjNjA3YzE2NWQ0NjdkOWY4YmUzNlwiLFwiYjM5YWNiNjE0ZTZlMGRjZmE1MzM3MTIxYjk1MzQyNGRcIixcIjg2NTVhODlhYzAzNTZjYWI2MmY4ZWQzOTZlZGQ2MjA5XCIsXCI2Y2MwNTVmMGNiNGQ3MjIwOWYxNDM5N2YyNzFmNWVkNlwiXSxcIjEwLjFcIjpcIjAzYzlkMGM5NTIxZjE0YTY5NDg2OGJhNjU2ZDA0Njk3XCIsXCIxMC4yXCI6XCI3MzFmNWJjN2NlN2MxYzExMWE2ZjgwZmFmZmZlY2EyNlwiLFwiMTAuM1wiOlwiMWY1Y2MwNDBhZjJiZTI5MDhkYzI4NzhhYmU2MzE3NDZcIn0iLCJmOWRmNzM4ZTdlMjlhNzY1NzdhNDNhZDlkOWNlZjM4YSJd"
-                    />
-                    <input
-                      type="hidden"
-                      class="gform_hidden"
-                      name="gform_target_page_number_3"
-                      id="gform_target_page_number_3"
-                      value="0"
-                    />
-                    <input
-                      type="hidden"
-                      class="gform_hidden"
-                      name="gform_source_page_number_3"
-                      id="gform_source_page_number_3"
-                      value="1"
-                    />
-                    <input type="hidden" name="gform_field_values" value="" />
-                  </div>
-                </form>
-              </div>
             </div>
           </div>
         </div>
@@ -741,9 +472,9 @@ import "toastify-js/src/toastify.css";
           <div
             class="et_pb_button_module_wrapper et_pb_button_0_wrapper et_pb_button_alignment_center et_pb_module"
           >
-            <a
-              class="et_pb_button et_pb_button_0 et_pb_bg_layout_dark"
-              href="#form">Discover what it can do for you!</a
+            <button
+              class="et_pb_button et_pb_button_0 et_pb_bg_layout_dark tally-button"
+              >Discover what it can do for you!</button
             >
           </div>
         </div><div
@@ -790,12 +521,13 @@ import "toastify-js/src/toastify.css";
           <div
             class="et_pb_button_module_wrapper et_pb_button_1_wrapper et_pb_button_alignment_center et_pb_module download-button"
           >
-            <a
-              class="et_pb_button et_pb_button_1 et_pb_bg_layout_light"
-              href="#form">Download the PDF</a
+            <button
+              class="et_pb_button et_pb_button_1 et_pb_bg_layout_light tally-button"
+              >Download the PDF</button
             >
           </div>
         </div>
+        <RabbitModal />
       </div>
     </div>
 
